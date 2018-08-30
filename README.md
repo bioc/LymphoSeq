@@ -8,30 +8,33 @@ Biotechnologies' ImmunoSEQ assay](http://www.adaptivebiotech.com/immunoseq).
 #### Install release version 1.4
 ###### Install from [Bioconductor](https://www.bioconductor.org/packages/LymphoSeq)
 ```
-source("https://bioconductor.org/biocLite.R")
-biocLite("LymphoSeq")
+if (!requireNamespace("BiocManager", quietly=TRUE))
+    install.packages("BiocManager")
+BiocManager::install("LymphoSeq")
 ```
 
 #### Install developer version 1.5
 ###### Option 1:  Install from [Bioconductor developer branch](https://www.bioconductor.org/developers/how-to/useDevel/)
 ```
 # Switch to Bioconductor developer branch (requires latest version of R)
-library(BiocInstaller)
+library(BiocManager)
 useDevel()
 
 # Download developer release
-source("https://bioconductor.org/biocLite.R")
-biocLite("LymphoSeq")
+if (!requireNamespace("BiocManager", quietly=TRUE))
+    install.packages("BiocManager")
+BiocManager::install("LymphoSeq")
 
 # Switch back to Bioconductor release branch
-library(BiocInstaller)
+library(BiocManager)
 useDevel()
 ```
 ###### Option 2:  Install from GitHub
 ```
 # Install the latest version of Bioconductor
-source("https://bioconductor.org/biocLite.R")
-biocLite()
+if (!requireNamespace("BiocManager", quietly=TRUE))
+    install.packages("BiocManager")
+BiocManager::install()
 
 # Download developer tools
 install.packages("devtools")
