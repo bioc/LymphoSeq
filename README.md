@@ -18,16 +18,12 @@ BiocManager::install("LymphoSeq")
 ```
 # Switch to Bioconductor developer branch (requires latest version of R)
 library(BiocManager)
-useDevel()
+BiocManager::install(version = "devel")
 
 # Download developer release
 if (!requireNamespace("BiocManager", quietly=TRUE))
     install.packages("BiocManager")
 BiocManager::install("LymphoSeq")
-
-# Switch back to Bioconductor release branch
-library(BiocManager)
-useDevel()
 ```
 ###### Option 2:  Install from GitHub
 ```
